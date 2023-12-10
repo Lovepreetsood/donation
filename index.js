@@ -8,7 +8,12 @@ const stripeSecretKey = 'sk_test_51OEve0SBkRy3VUVVNFjwnCMDFsYYgENPlAJ7ebrbDFlSdc
 
 
 const app = express();
-
+app.get("/",(req,res)=>{
+    res.json({
+        hey:'hello',
+        f:'ff'
+    })   
+    })
 app.use((req, res,next) => {
     bodyParser.json()(req,res,next)
 })
